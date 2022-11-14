@@ -1,24 +1,11 @@
-if (typeof document !== "undefined") {
-    const form = document.getElementById('form');
-    if(document.querySelector('[name="login"]') != null){
-        var lg = document.querySelector('[name="login"]').value;
-    }
-    if(document.querySelector('[name="pas"]') != null){
-        var pas = document.querySelector('[name="pas"]').value;
-    }
-    if(document.querySelector('[name="surname"]') != null){
-        var surname = document.querySelector('[name="surname"]').value;
-    }
-    // form.addEventListener('submit', getFormValue);
-    //     function getFormValue(event) {
-    //         event.preventDefault(); 
-    //     }
-}
+var lg = document.getElementsByTagName("input")[0];
+var pas = document.getElementsByTagName("input")[1];
+var surname = document.getElementsByTagName("input")[2];
 
 const data = {
-    login: lg,
-    password: pas,
-    surname: surname
+    login: lg.value,
+    password: pas.value,
+    surname: surname.value
 }
 
 console.log(data)
