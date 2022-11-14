@@ -102,6 +102,11 @@ a:hover{
     font-weight: 100;
 }
 
+#but:hover{
+    text-decoration: none;
+    color:#000;
+}
+
 #hr1{
     position: absolute;
     width: 623px;
