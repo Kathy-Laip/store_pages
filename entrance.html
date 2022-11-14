@@ -10,6 +10,7 @@
     <title>Kitty's shop | Вход</title>
 </head>
 <body>
+    <script src="app.js"></script>
     <img class="fon" src="фон3 1.png">
     <div class="footer">
     </div>
@@ -19,17 +20,22 @@
         <p class="text" id="third">О нас</p>
         <a href="entrance.html" class="text" id="forth">Войти</a>
         <p class="text1" id="entrance">Вход</p>
-    <div>
-        <label for="login"></label>
-        <input type="email" id="login" placeholder="Логин">
-    </div>
-    <div>
-        <label for="pas"></label>
-        <input type="password" id="pas" placeholder="Пароль">
-    </div>
-    <div>
-        <label for="name"></label>
-        <input type="name" id="name" placeholder="Имя">
-    </div>
+    <form action="#" method="#" id="form">
+        <div>
+            <label for="login"></label>
+            <input type="email" name="login" id="login" placeholder="Логин">
+        </div>
+        <div>
+            <label for="pas"></label>
+            <input type="password" name="pas" id="pas" placeholder="Пароль">
+        </div>
+        <div>
+            <label for="name"></label>
+            <input type="name" name="name" id="name" placeholder="Имя">
+        </div>
+        <div>
+            <button type="submit" id="exit">Войти</button>
+        </div>
+    </form>
 </body>
 </html>

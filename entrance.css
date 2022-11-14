@@ -50,3 +50,19 @@
     top: calc(50% - 51px/2 + 167.5px);
 
 }
+
+#exit{
+    background-color: #fff;
+    border-radius: 15px;
+    border-color: #fff;
+    box-sizing: border-box;
+    position: absolute;
+    width: 610px;
+    height: 51px;
+    left: calc(50% - 610px/2 + 2px);
+    top: calc(50% - 51px/2 + 259.5px);
+}
+
+form div {
+    margin: 12px;
+}
