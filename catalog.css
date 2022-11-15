@@ -81,7 +81,7 @@
 
 #wcosmetics{
     position: absolute;
-    width: 345px;
+    width: 380px;
     height: 35px;
     left: 377px;
     top: 490px;
@@ -124,4 +124,15 @@
     border: 3px solid #4F5434;
     box-shadow: 0px -4px 18px #73A761;
     border-radius: 30px;
+}
+
+.cardwhite{
+    background-color: #fff;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 44.44%;
+    border: 0px solid #4F5434;
+    border-radius: 30px 30px 0px 0px;
 }

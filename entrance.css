@@ -52,15 +52,24 @@
 }
 
 #exit{
-    background-color: #fff;
+    background-color: #4f5434;
+    color: #fff;
     border-radius: 15px;
     border-color: #4f5434;
     box-sizing: border-box;
     position: absolute;
-    width: 610px;
+    width: 300px;
     height: 51px;
-    left: calc(50% - 610px/2 + 2px);
+    left: calc(50% - 300px/2 + 2px);
     top: calc(50% - 51px/2 + 259.5px);
+    font-size: 27px;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+#exit:hover{
+    background-color: #9DA57E;
+    color: black;
+    
 }
 
 form div {
