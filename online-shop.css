@@ -35,7 +35,7 @@
 .text3{
     font-family: 'Playfair Display';
     font-style: normal;
-    font-weight: 300;
+    /* font-weight: 400; */
     font-size: 86px;
     color: #000000;
 }

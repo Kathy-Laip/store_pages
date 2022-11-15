@@ -6,13 +6,13 @@
     height: 950px;
 } 
 
-#h3{
+#hor{
     position: absolute;
     width: 487px;
     height: 0px;
     left: 0px;
     top: 406.5px;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
     background-color: #000000;
 }
 
@@ -26,13 +26,13 @@
     border-radius: 15px;
 }
 
-#h32{
+#hor1{
     position: absolute;
     width: 490px;
     height: 0px;
-    left: 1446px;
+    right: 0px;
     top: 407px;
-    border: 4px solid #000000;
+    border: 2px solid #000000;
     background-color: #000000;
 }
 
@@ -47,13 +47,42 @@
 }
 
 #catalog{
-    position: absolute;
-    width: 289px;
-    height: 73px;
-    left: 577px;
-    top: 353px;
-    font-style: normal;
+    position:absolute;
+    width:330px;
+    height: 100px;
+    top: 270px;
+    left: 40%;
+    /* text-align: center; */
     font-weight: 300;
     font-size: 86px;
     line-height: 103px;
+}
+
+#hrw{
+    position:absolute;
+    /* box-sizing: border-box; */
+    width: 287px;
+    height: 0px;
+    left: 0px;
+    top: 550px;
+    border: 1px solid black;
+    background-color: #000000;
+}
+
+#circlew{
+    width: 20px;
+    height: 20px;
+    background-color: #000000;
+    position:absolute;
+    left: 287px;
+    top: 550px;
+    border-radius: 15px;
+}
+
+#wcosmetics{
+    position: absolute;
+    width: 345px;
+    height: 35px;
+    left: 377px;
+    top: 490px;
 }
