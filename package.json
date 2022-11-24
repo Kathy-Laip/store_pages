@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Kathy-Laip/store_pages#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "pug": "^2.0.3"
   }
 }
