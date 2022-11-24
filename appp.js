@@ -6,8 +6,7 @@ app.listen(3000, function(){
     console.log('node express work on 3000')
 });
 
-
-app.get('/', function(req, res){
+app.get('/online-shop.html', function(req, res){
     console.log('/ load')
-    res.render('online-shop.html')
+    res.sendFile('online-shop.html', {root : __dirname + '/public'})
 });
