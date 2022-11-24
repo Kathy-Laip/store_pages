@@ -1,0 +1,22 @@
+{
+  "name": "node_list_shop",
+  "version": "1.0.0",
+  "description": "Сайт магазина, который будет соединяться с базой данных через сервер, написанный на Node.js, коннект через Js",
+  "main": "appp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kathy-Laip/store_pages.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kathy-Laip/store_pages/issues"
+  },
+  "homepage": "https://github.com/Kathy-Laip/store_pages#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

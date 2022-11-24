@@ -1,19 +1,13 @@
-const http = require('http');
-const fs = require('fs');
-// http.createServer().listen(3000);
-http.createServer(function(request, response){
-    console.log(request.url);
-    console.log(request.method);
-    console.log(request.headers['user-agent']);
+let express = require('express');
+let app = express();
+app.use(express.static('public'));
 
-    response.setHeader('Content-type', 'text/html;charset=utf-8;')
+app.listen(3000, function(){
+    console.log('node express work on 3000')
+});
 
-    if(request.url == '/'){
-        response.end('Main <h2>Hello</h2> Привет мир');
-    } 
-    else if (request.url == '/online-shop.html'){
-        let mainPage = fs.readFileSync('online-shop.html');
-        console.log(mainPage);
-        response.end(mainPage);
-    }
-}).listen(3000);
+
+app.get('/', function(req, res){
+    console.log('/ load')
+    res.render('online-shop.html')
+});
