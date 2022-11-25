@@ -1,7 +1,17 @@
-let express = require('express')
-let app = express()
-app.use(express.static('public'))
-app.set('view engine', 'pug')
+let express = require('express') // экспресс модуль
+let app = express() // переменная для использования express
+
+let mysql = require('mysql') // mysql модуль
+let con = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'shop1'
+});
+
+app.use(express.static('public')) //использование папки public
+
+app.set('view engine', 'pug') // работа с html через pug
 
 app.listen(3000, function(){
     console.log('node express work on 3000')
