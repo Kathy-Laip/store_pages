@@ -18,6 +18,12 @@ app.listen(3000, function(){
 });
 
 app.get('/online-shop.html', function(req, res){
-    console.log('/ load')
+    con.query(
+        'SELECT * FROM category',
+        function(error, result){
+            if (error) throw err;
+            console.log(result)
+        }
+    );
     res.sendFile('online-shop.html', {root : __dirname + '/public'})
 });
