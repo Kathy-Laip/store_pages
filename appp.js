@@ -9,6 +9,9 @@ let con = mysql.createConnection({
     database: 'shop1'
 });
 
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+
 con.connect(function(err){
     if(err) throw err
     console.log('Connected!')
@@ -16,7 +19,7 @@ con.connect(function(err){
 
 app.use(express.static('public')) //использование папки public
 
-app.set('view engine', 'pug') // работа с html через pug
+app.set('view engine', 'html') // работа с html через pug
 
 app.listen(3000, function(){
     console.log('node express work on 3000')
@@ -41,6 +44,8 @@ app.get('/online-shop.html', function(req, res){
 //     }
 // );
 
+global.document = new JSDOM(this.html).window.document;
+let datType = document.querySelector('#textType')
 
 con.query(
     'SELECT id, type FROM product_type WHERE id = 1',
@@ -50,7 +55,8 @@ con.query(
         for (let i = 0; i < result.length; i ++){
             type[result[i]['id']] = result[i]['type'];
         }
-        console.log(type)
+        console.log(JSON.parse(JSON.stringify(type['1'])))
+        // datType.innerHTML = JSON.parse(JSON.stringify(type['1']))
     }
 )
 
