@@ -37,7 +37,7 @@ con.query(
         for(let i = 0; i < result.length; i++){
             us[result[i]['id']] = result[i];
         }
-        console.log(us)
+        console.log(JSON.parse(JSON.stringify(us)))
     }
 );
 con.end()
