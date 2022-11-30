@@ -23,43 +23,21 @@ app.listen(3000, function(){
 });
 
 app.get('/online-shop.html', function(req, res){
-    con.query(
-        'SELECT * FROM category',
-        function(error, result){
-            console.log('Hi')
-            if (error) 
-            {
-                throw error;
-            }
-            console.log(result)
-            // let us = {}
-            // for(let i = 0; i < result.length; i++){
-            //     us[result[i]['id']] = result[i];
-            // }
-            // console.log(us)
-        }
-    );
-    con.end()
     res.sendFile('online-shop.html', {root : __dirname + '/public'})
 });
 
 con.query(
     'SELECT * FROM product',
     function(error, result){
-        console.log('Hi')
         if (error) 
         {
             throw error;
         }
-        console.log(result)
-        // let us = {}
-        // for(let i = 0; i < result.length; i++){
-        //     us[result[i]['id']] = result[i];
-        // }
-        // console.log(us)
+        let us = {}
+        for(let i = 0; i < result.length; i++){
+            us[result[i]['id']] = result[i];
+        }
+        console.log(us)
     }
 );
 con.end()
-
-
-// con.end()
