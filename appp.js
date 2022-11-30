@@ -55,10 +55,13 @@ con.query(
         for (let i = 0; i < result.length; i ++){
             type[result[i]['id']] = result[i]['type'];
         }
-        console.log(JSON.parse(JSON.stringify(type['1'])))
+        // console.log(JSON.parse(JSON.stringify(type['1'])))
         // datType.innerHTML = JSON.parse(JSON.stringify(type['1']))
+        console.log(type['1'])
+        app.post('/catalog.html', (req,res) => {
+            res.send({type1: type['1']})
+        })
     }
 )
 
 con.end()    
-
