@@ -54,7 +54,5 @@ con.query(
     }
 )
 
-document.getElementById('textType').innerHTML = type['1']
-
 con.end()    
 
