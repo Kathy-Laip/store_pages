@@ -26,18 +26,35 @@ app.get('/online-shop.html', function(req, res){
     res.sendFile('online-shop.html', {root : __dirname + '/public'})
 });
 
+// con.query(
+//     'SELECT * FROM product',
+//     function(error, result){
+//         if (error) 
+//         {
+//             throw error;
+//         }
+//         let us = {}
+//         for(let i = 0; i < result.length; i++){
+//             us[result[i]['id']] = result[i];
+//         }
+//         console.log(JSON.parse(JSON.stringify(us)))
+//     }
+// );
+
+
 con.query(
-    'SELECT * FROM product',
+    'SELECT id, type FROM product_type WHERE id = 1',
     function(error, result){
-        if (error) 
-        {
-            throw error;
+        if (error) throw error;
+        let type = {}
+        for (let i = 0; i < result.length; i ++){
+            type[result[i]['id']] = result[i]['type'];
         }
-        let us = {}
-        for(let i = 0; i < result.length; i++){
-            us[result[i]['id']] = result[i];
-        }
-        console.log(JSON.parse(JSON.stringify(us)))
+        console.log(type)
     }
-);
-con.end()
+)
+
+document.getElementById('textType').innerHTML = type['1']
+
+con.end()    
+
