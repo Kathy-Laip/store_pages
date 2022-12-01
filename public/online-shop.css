@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
 .logo{
+    z-index: 10;
     position: fixed;
     left: 6.94%;
     top: 28px;
 }
 .footer{
+    z-index: 10;
     position:fixed;
     left:0;
     right: 0;
@@ -239,7 +241,7 @@ a:hover{
     top:2500px;
     width:100%;
     height: 500px;
-    background-color: #9DA57E;
+    background-color: #4f5434;
 }
 
 #contact{
