@@ -42,4 +42,16 @@ con.query(
     }
 )
 
+con.query(
+    'SELECT * FROM charactiristic',
+    function(error, result){
+        if(error) throw error;
+        let discriptionColor = {}
+        discriptionColor[result[0]['id']] = result[0]['discription'] + ',' + result[1]['discription'];
+        app.post('/catalog.html', (req,res) => {
+            res.send(discriptionColor['1'])
+        })
+    }
+)
+
 con.end()    
