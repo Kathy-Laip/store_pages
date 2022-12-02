@@ -27,7 +27,7 @@ app.get('/online-shop.html', async function(req, res){
 });
 
 con.query(
-    'SELECT product.id as id, discription, product_type.type as type, brand.brand FROM product INNER JOIN product_type ON product.id_product_type = product_type.id INNER JOIN charactiristic ON product.id = charactiristic.id_product INNER JOIN brand ON product.id_brand = brand.id ORDER BY id;',
+    'SELECT product.id as id, product_type.type as type, brand.brand, discription FROM product INNER JOIN product_type ON product.id_product_type = product_type.id INNER JOIN charactiristic ON product.id = charactiristic.id_product INNER JOIN brand ON product.id_brand = brand.id ORDER BY id;',
     async function(error, result){
         if (error) throw error;
         // let dataOfProducts = {}
@@ -37,7 +37,7 @@ con.query(
         //     // }
         //     dataOfProducts[result[i]['id']] = result[i];
         // }
-        console.log(JSON.parse(JSON.stringify(result)))
+        // console.log(JSON.parse(JSON.stringify(result)))
         app.post('/catalog.html', (req,res) => {
             res.send(JSON.parse(JSON.stringify(result)))
         })

@@ -1,12 +1,14 @@
-// let datType = document.querySelector('#textType')
-// let ColorDisc = document.querySelector('#ColorDiscription')
+let productOne = document.querySelector('#textProduct1')
 
 var request = new XMLHttpRequest()
-equest.open('POST', '/catalog.html', true)
+request.open('POST', '/catalog.html', true)
 request.onload = function(){
-    let dataFromDB = request.response
-};
-console.log(dataFromDB)
+    var dataFromDB = request.responseText
+    // productOne.textContent = '' + dataFromDB[0]["type"] + '\n' + 'Цвет: ' + dataFromDB[0]["discription"] + '\n' + 'Тип: ' + dataFromDB[1]["discription"] + '\n' + 'Бренд: ' + dataFromDB[0]["brand"]
+    return dataFromDB
+}
+
 request.send()
+
 
 
