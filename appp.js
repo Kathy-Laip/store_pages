@@ -22,34 +22,24 @@ app.listen(3000, function(){
     console.log('node express work on 3000')
 });
 
-app.get('/online-shop.html', function(req, res){
+app.get('/online-shop.html', async function(req, res){
     res.sendFile('online-shop.html', {root : __dirname + '/public'})
 });
 
 con.query(
-    'SELECT id, type FROM product_type WHERE id = 1',
-    function(error, result){
+    'SELECT product.id as id, discription, product_type.type as type, brand.brand FROM product INNER JOIN product_type ON product.id_product_type = product_type.id INNER JOIN charactiristic ON product.id = charactiristic.id_product INNER JOIN brand ON product.id_brand = brand.id ORDER BY id;',
+    async function(error, result){
         if (error) throw error;
-        let type = {}
-        for (let i = 0; i < result.length; i ++){
-            type[result[i]['id']] = result[i]['type'];
-        }
-        // console.log(JSON.parse(JSON.stringify(type['1'])))
-        // datType.innerHTML = JSON.parse(JSON.stringify(type['1']))
+        // let dataOfProducts = {}
+        // for (let i = 0; i < result.length; i ++){
+        //     // if (result[i]['id'] == result[i + 1]['id']){
+        //     //     result[i + 1]['discription'] += ',' + result[i]['discription']
+        //     // }
+        //     dataOfProducts[result[i]['id']] = result[i];
+        // }
+        console.log(JSON.parse(JSON.stringify(result)))
         app.post('/catalog.html', (req,res) => {
-            res.send(type['1'])
-        })
-    }
-)
-
-con.query(
-    'SELECT * FROM charactiristic',
-    function(error, result){
-        if(error) throw error;
-        let discriptionColor = {}
-        discriptionColor[result[0]['id']] = result[0]['discription'] + ',' + result[1]['discription'];
-        app.post('/catalog.html', (req,res) => {
-            res.send(discriptionColor['1'])
+            res.send(JSON.parse(JSON.stringify(result)))
         })
     }
 )
