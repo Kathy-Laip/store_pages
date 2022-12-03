@@ -26,6 +26,14 @@
     color:black;
 }
 
+.textNormal{
+    font-family: 'Playfair DIsplay';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    color: #000;
+}
+
 .text1{
     font-family: 'Playfair Display';
     font-style: normal;
