@@ -1,4 +1,4 @@
-let productOne = document.querySelector('#textProduct1')
+let productOne = document.querySelector('#textPos')
 
 var request = new XMLHttpRequest()
 request.open('POST', '/catalog.html', true)
@@ -17,7 +17,8 @@ function pr1(data){
     var dataProduct = data.split(',')
     dataProduct[0] = dataProduct[0].slice(8, dataProduct[0].length - 1)
     var mas = dataProduct[0].split(' ')
-    productOne.innerHTML = mas[0] + '<br/>' + 'Бренд: ' + mas[1] + '<br/>' + 'Тип: ' + mas[2]
+    console.log(mas)
+    productOne.innerHTML = mas[0] + '<br/>' + 'Бренд: ' + mas[1] + '<br/>' + 'Цвет: ' + mas[2] + '<br/>' + 'Тип: ' + mas[3]
 }
 
 request.send()

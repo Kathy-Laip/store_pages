@@ -87,12 +87,9 @@
     top: 490px;
 }
 
-#positioncard{
-    position: absolute;
+.viewCard{
     width: 406px;
     height: 666px;
-    left: 98px;
-    top: 691px;
     box-sizing: border-box;
     background-color: #9DA57E;
     border: 3px solid #4F5434;
@@ -101,29 +98,507 @@
 }
 
 #positioncard1{
-    position:absolute;
-    width: 406px;
-    height: 666px;
-    left: 38%;
-    top: 691px;
-    box-sizing: border-box;
-    background-color: #9DA57E;
-    border: 3px solid #4F5434;
-    box-shadow: 0px -4px 18px #73A761;
-    border-radius: 30px;
+    position: absolute;
+    left: 130px;
+    top: 690px;
 }
 
 #positioncard2{
     position:absolute;
-    width: 406px;
-    height: 666px;
-    right: 98px;
-    top: 691px;
-    box-sizing: border-box;
-    background-color: #9DA57E;
-    border: 3px solid #4F5434;
-    box-shadow: 0px -4px 18px #73A761;
-    border-radius: 30px;
+    left: 38%;
+    top: 690px;
+}
+
+#positioncard3{
+    position:absolute;
+    right: 130px;
+    top: 690px;
+}
+
+#positioncard4{
+    position: absolute;
+    left: 130px;
+    top: 1420px;
+}
+
+#positioncard5{
+    position: absolute;
+    left: 38%;
+    top: 1420px;
+}
+
+#positioncard6{
+    position: absolute;
+    right: 130px;
+    top: 1420px;
+}
+
+#positioncard7{
+    position: absolute;
+    left: 130px;
+    top: 2150px;
+}
+
+#positioncard8{
+    position: absolute;
+    left: 38%;
+    top: 2150px;
+}
+
+#positioncard9{
+    position: absolute;
+    right: 130px;
+    top: 2150px;
+}
+
+#positioncard10{
+    position: absolute;
+    left: 130px;
+    top: 2880px;
+}
+
+#positioncard11{
+    position: absolute;
+    left: 38%;
+    top: 2880px;
+}
+
+#positioncard12{
+    position: absolute;
+    right: 130px;
+    top: 2880px;
+}
+
+#positioncard13{
+    position: absolute;
+    left: 130px;
+    top: 3610px;
+}
+
+#positioncard14{
+    position: absolute;
+    left: 38%;
+    top: 3610px;
+}
+
+#positioncard15{
+    position: absolute;
+    right: 130px;
+    top: 3610px;
+}
+
+#positioncard16{
+    position: absolute;
+    left: 130px;
+    top: 4340px;
+}
+
+#positioncard17{
+    position: absolute;
+    left: 38%;
+    top: 4340px;
+}
+
+#positioncard18{
+    position: absolute;
+    right: 130px;
+    top: 4340px;
+}
+
+#positioncard19{
+    position: absolute;
+    left: 130px;
+    top: 5070px;
+}
+
+#positioncard20{
+    position: absolute;
+    left: 38%;
+    top: 5070px;
+}
+
+#positioncard21{
+    position: absolute;
+    right: 130px;
+    top: 5070px;
+}
+
+#positioncard22{
+    position: absolute;
+    left: 130px;
+    top: 5800px;
+}
+
+#positioncard23{
+    position: absolute;
+    left: 38%;
+    top: 5800px;
+}
+
+#positioncard24{
+    position: absolute;
+    right: 130px;
+    top: 5800px;
+}
+
+#positioncard25{
+    position: absolute;
+    left: 130px;
+    top: 6530px;
+}
+
+#positioncard26{
+    position: absolute;
+    left: 38%;
+    top: 6530px;
+}
+
+#positioncard27{
+    position: absolute;
+    right: 130px;
+    top: 6530px;
+}
+
+#positioncard28{
+    position: absolute;
+    left: 130px;
+    top: 7260px;
+}
+
+#positioncard29{
+    position: absolute;
+    left: 38%;
+    top: 7260px;
+}
+
+#positioncard30{
+    position: absolute;
+    right: 130px;
+    top: 7260px;
+}
+
+#positioncard31{
+    position: absolute;
+    left: 130px;
+    top: 7990px;
+}
+
+#positioncard32{
+    position: absolute;
+    left: 38%;
+    top: 7990px;
+}
+
+#positioncard33{
+    position: absolute;
+    right: 130px;
+    top: 7990px;
+}
+
+#positioncard34{
+    position: absolute;
+    left: 130px;
+    top: 8720px;
+}
+
+#positioncard35{
+    position: absolute;
+    left: 38%;
+    top: 8720px;
+}
+
+#positioncard36{
+    position: absolute;
+    right: 130px;
+    top: 8720px;
+}
+
+#positioncard37{
+    position: absolute;
+    left: 130px;
+    top: 9450px;
+}
+
+#positioncard38{
+    position: absolute;
+    left: 38%;
+    top: 9450px;
+}
+
+#positioncard39{
+    position: absolute;
+    right: 130px;
+    top: 9450px;
+}
+
+#positioncard40{
+    position: absolute;
+    left: 130px;
+    top: 10180px;
+}
+
+#positioncard41{
+    position: absolute;
+    left: 38%;
+    top: 10180px;
+}
+
+#positioncard42{
+    position: absolute;
+    right: 130px;
+    top: 10180px;
+}
+
+#positioncard43{
+    position: absolute;
+    left: 130px;
+    top: 10910px;
+}
+
+#positioncard44{
+    position: absolute;
+    left: 38%;
+    top: 10910px;
+}
+
+#positioncard45{
+    position: absolute;
+    right: 130px;
+    top: 10910px;
+}
+
+#positioncard46{
+    position: absolute;
+    left: 130px;
+    top: 11640px;
+}
+
+#positioncard47{
+    position: absolute;
+    left: 38%;
+    top: 11640px;
+}
+
+#positioncard48{
+    position: absolute;
+    right: 130px;
+    top: 11640px;
+}
+
+#positioncard49{
+    position: absolute;
+    left: 130px;
+    top: 12370px;
+}
+
+#positioncard50{
+    position: absolute;
+    left: 38%;
+    top: 12370px;
+}
+
+#positioncard51{
+    position: absolute;
+    right: 130px;
+    top: 12370px;
+}
+
+#positioncard52{
+    position: absolute;
+    left: 130px;
+    top: 13100px;
+}
+
+#positioncard53{
+    position: absolute;
+    left: 38%;
+    top: 13100px;
+}
+
+#positioncard54{
+    position: absolute;
+    right: 130px;
+    top: 13100px;
+}
+
+#positioncard55{
+    position: absolute;
+    left: 130px;
+    top: 13830px;
+}
+
+#positioncard56{
+    position: absolute;
+    left: 38%;
+    top: 13830px;
+}
+
+#positioncard57{
+    position: absolute;
+    right: 130px;
+    top: 13830px;
+}
+
+#positioncard58{
+    position: absolute;
+    left: 130px;
+    top: 14560px;
+}
+
+#positioncard59{
+    position: absolute;
+    left: 38%;
+    top: 14560px;
+}
+
+#positioncard60{
+    position: absolute;
+    right: 130px;
+    top: 14560px;
+}
+
+#positioncard61{
+    position: absolute;
+    left: 130px;
+    top: 15290px;
+}
+
+#positioncard62{
+    position: absolute;
+    left: 38%;
+    top: 15290px;
+}
+
+#positioncard63{
+    position: absolute;
+    right: 130px;
+    top: 15290px;
+}
+
+#positioncard64{
+    position: absolute;
+    left: 130px;
+    top: 16020px;
+}
+
+#positioncard65{
+    position: absolute;
+    left: 38%;
+    top: 16020px;
+}
+
+#positioncard66{
+    position: absolute;
+    right: 130px;
+    top: 16020px;
+}
+
+#positioncard67{
+    position: absolute;
+    left: 130px;
+    top: 16750px;
+}
+
+#positioncard68{
+    position: absolute;
+    left: 38%;
+    top: 16750px;
+}
+
+#positioncard69{
+    position: absolute;
+    right: 130px;
+    top: 16750px;
+}
+
+#positioncard70{
+    position: absolute;
+    left: 130px;
+    top: 17480px;
+}
+
+#positioncard71{
+    position: absolute;
+    left: 38%;
+    top: 17480px;
+}
+
+#positioncard72{
+    position: absolute;
+    right: 130px;
+    top: 17480px;
+}
+
+#positioncard73{
+    position: absolute;
+    left: 130px;
+    top: 18210px;
+}
+
+#positioncard74{
+    position: absolute;
+    left: 38%;
+    top: 18210px;
+}
+
+#positioncard75{
+    position: absolute;
+    right: 130px;
+    top: 18210px;
+}
+
+#positioncard76{
+    position: absolute;
+    left: 130px;
+    top: 18940px;
+}
+
+#positioncard77{
+    position: absolute;
+    left: 38%;
+    top: 18940px;
+}
+
+#positioncard78{
+    position: absolute;
+    right: 130px;
+    top: 18940px;
+}
+
+#positioncard79{
+    position: absolute;
+    left: 130px;
+    top: 19670px;
+}
+
+#positioncard80{
+    position: absolute;
+    left: 38%;
+    top: 19670px;
+}
+
+#positioncard81{
+    position: absolute;
+    right: 130px;
+    top: 19670px;
+}
+
+#positioncard82{
+    position: absolute;
+    left: 130px;
+    top: 20400px;
+}
+
+#positioncard83{
+    position: absolute;
+    left: 38%;
+    top: 20400px;
+}
+
+#positioncard84{
+    position: absolute;
+    right: 130px;
+    top: 20400px;
 }
 
 .cardwhite{
@@ -137,10 +612,23 @@
     border-radius: 30px 30px 0px 0px;
 }
 
-#textProduct1{
+.disProd{
+    width: 300px;
+    height: 140px;
+}
+
+#textPos{
     position: absolute;
     left: 6.89%;
     top: 59.31%;
-    width: 240px;
-    height: 140px;
+}
+
+
+.header1{
+    position:absolute;
+    left:0;
+    top: 21250px;
+    width:100%;
+    height: 500px;
+    background-color: #4f5434;
 }

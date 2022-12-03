@@ -1,3 +1,4 @@
+const e = require('express');
 let express = require('express') // экспресс модуль
 let app = express() // переменная для использования express
 
@@ -34,6 +35,7 @@ con.query(
         for (let i = 1; i < result.length; i ++){
             dataOfProducts[result[i]['id']] = `${result[i]['id']} ${result[i]['type']} ${result[i]['brand']} ${result[i]['discription']}`;
         }
+        // console.log(dataOfProducts)
         app.post('/catalog.html', (req,res) => {
             res.send(dataOfProducts)
         })
