@@ -32,7 +32,7 @@ con.query(
     async function(error, result){
         if (error) throw error;
         let dataOfProducts = {}
-        for (let i = 1; i < result.length; i ++){
+        for (let i = 0; i < result.length; i ++){
             dataOfProducts[result[i]['id']] = `${result[i]['id']} ${result[i]['type']} ${result[i]['brand']} ${result[i]['discription']}`;
         }
         // console.log(dataOfProducts)

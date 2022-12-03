@@ -114,14 +114,16 @@ async function pr1(data){
         let masEl = dataProduct[i].split(' ')
         mas.push(masEl)
     }
+    console.log(mas)
     for(let i = 0; i < products.length; i++){
-        if(mas[i].length == 5){
-            products[i].innerHTML = mas[i][1] + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Цвет: ' + mas[i][3] + '<br/>' + 'Тип: ' + mas[i][4]
+        if(mas[i].length === 5){
+            products[i].innerHTML = mas[i][1] + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Цвет: ' + mas[i][3] + '<br/>' + 'Тип: ' + mas[i][4].replace('"', '').replace('}', '')
         } 
-        else if(mas[i].length == 4){
-            products[i].innerHTML = mas[i][1] + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Тип: ' + mas[i][3]
+        else if(mas[i].length === 4){
+            products[i].innerHTML = mas[i][1] + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Тип: ' + mas[i][3].replace('"', '')
         }
     }
+    
 }
 
 request.send()
