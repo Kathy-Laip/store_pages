@@ -93,6 +93,19 @@
 
 }
 
+.posimg1{
+    position: absolute;
+    left: 20%;
+    top:20%;
+
+}
+
+.posimg3{
+    position: absolute;
+    left: 33%;
+    top: 10%;
+}
+
 .viewCard{
     width: 406px;
     height: 666px;
