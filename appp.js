@@ -42,4 +42,20 @@ con.query(
     }
 )
 
+con.query(
+    'SELECT id, login, password, name_user FROM account',
+    async function(error, result){
+        if(error) throw error;
+        let dataUsers = {}
+        for(let i = 0; i < result.length; i++){
+            dataUsers[result[i]['id']] = `${result[i]['id']} ${result[i]['login']} ${result[i]['password']} ${result[i]['name_user']}`
+        }
+        console.log(dataUsers)
+        app.post('/entrance.html', (req,res) => {
+            res.send(dataUsers)
+        })
+    }
+
+)
+
 con.end()    
