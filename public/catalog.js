@@ -124,7 +124,7 @@ async function pr1(data){
         else if(mas[i].length === 5){
             products[i].innerHTML = mas[i][1].replace('_', ' ') + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Тип: ' + mas[i][4].replace('"', '')
         }
-        pricesText[i].innerHTML = 'Цена: ' + mas[i][3]
+        pricesText[i].innerHTML = 'Цена: ' + mas[i][3] + ' p.'
     }
     
 }
