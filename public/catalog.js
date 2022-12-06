@@ -94,6 +94,9 @@ var products = [product1, product2, product3, product4, product5, product6, prod
     product73, product74, product75, product76, product77, product78, product79, product80, product81,
     product82, product83, product84]
 
+// var priceText = document.querySelectorAll('.textPrice')
+// console.log(priceText.innerText)
+
 var request = new XMLHttpRequest()
 request.open('POST', '/catalog.html', true)
 
