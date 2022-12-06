@@ -106,6 +106,18 @@
     top: 10%;
 }
 
+.price{
+    position: absolute;
+    width: 240px;
+    height: 60px;
+    left: 5.36%;
+    right: 35.97%;
+    top: 88%;
+    border-radius: 15px;
+    background-color: #4F5434;
+}
+
+
 .viewCard{
     width: 406px;
     height: 666px;

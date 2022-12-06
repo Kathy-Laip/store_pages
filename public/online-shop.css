@@ -34,6 +34,17 @@
     color: #000;
 }
 
+.textPrice{
+    position: absolute;
+    left: 10.2%;
+    bottom: 15%;
+    font-family: 'Playfair DIsplay';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    color: #fff;
+}
+
 .text1{
     font-family: 'Playfair Display';
     font-style: normal;
