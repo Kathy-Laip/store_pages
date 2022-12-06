@@ -28,14 +28,14 @@ app.get('/online-shop.html', async function(req, res){
 });
 
 con.query(
-    'SELECT product.id as id, product_type.type as type, brand.brand, discription FROM product INNER JOIN product_type ON product.id_product_type = product_type.id INNER JOIN charactiristic ON product.id = charactiristic.id_product INNER JOIN brand ON product.id_brand = brand.id ORDER BY id;',
+    'SELECT product.id as id, product_type.type as type, brand.brand, price, discription FROM product INNER JOIN product_type ON product.id_product_type = product_type.id INNER JOIN charactiristic ON product.id = charactiristic.id_product INNER JOIN brand ON product.id_brand = brand.id ORDER BY id;',
     async function(error, result){
         if (error) throw error;
         let dataOfProducts = {}
         for (let i = 0; i < result.length; i ++){
-            dataOfProducts[result[i]['id']] = `${result[i]['id']} ${result[i]['type']} ${result[i]['brand']} ${result[i]['discription']}`;
+            dataOfProducts[result[i]['id']] = `${result[i]['id']} ${result[i]['type']} ${result[i]['brand']} ${result[i]['price']} ${result[i]['discription']}`;
         }
-        // console.log(dataOfProducts)
+        //console.log(dataOfProducts)
         app.post('/catalog.html', (req,res) => {
             res.send(dataOfProducts)
         })

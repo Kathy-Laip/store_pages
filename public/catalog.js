@@ -94,9 +94,6 @@ var products = [product1, product2, product3, product4, product5, product6, prod
     product73, product74, product75, product76, product77, product78, product79, product80, product81,
     product82, product83, product84]
 
-// var priceText = document.querySelectorAll('.textPrice')
-// console.log(priceText.innerText)
-
 var request = new XMLHttpRequest()
 request.open('POST', '/catalog.html', true)
 
@@ -111,20 +108,23 @@ const p = new Promise((resolve, reject) => {
 })
 
 async function pr1(data){
+    var pricesText = document.querySelectorAll('.textPrice')
+
     var dataProduct = data.split(',')
     var mas = []
     for(let i = 0; i < dataProduct.length; i++){
         let masEl = dataProduct[i].split(' ')
         mas.push(masEl)
     }
-    console.log(mas)
+
     for(let i = 0; i < products.length; i++){
-        if(mas[i].length === 5){
-            products[i].innerHTML = mas[i][1].replace('_',' ') + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Цвет: ' + mas[i][3] + '<br/>' + 'Тип: ' + mas[i][4].replace('"', '').replace('}', '')
+        if(mas[i].length === 6){
+            products[i].innerHTML = mas[i][1].replace('_',' ') + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Цвет: ' + mas[i][4] + '<br/>' + 'Тип: ' + mas[i][5].replace('"', '').replace('}', '')
         } 
-        else if(mas[i].length === 4){
-            products[i].innerHTML = mas[i][1].replace('_', ' ') + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Тип: ' + mas[i][3].replace('"', '')
+        else if(mas[i].length === 5){
+            products[i].innerHTML = mas[i][1].replace('_', ' ') + '<br/>' + 'Бренд: ' + mas[i][2] + '<br/>' + 'Тип: ' + mas[i][4].replace('"', '')
         }
+        pricesText[i].innerHTML = 'Цена: ' + mas[i][3]
     }
     
 }
