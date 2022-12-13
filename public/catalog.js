@@ -83,7 +83,7 @@ let product82 = document.querySelector('#textPos82')
 let product83 = document.querySelector('#textPos83')
 let product84 = document.querySelector('#textPos84')
 
-var products = [product1, product2, product3, product4, product5, product6, product7, product8, product9,
+window.products = [product1, product2, product3, product4, product5, product6, product7, product8, product9,
     product10, product11, product12, product13, product14, product15, product16, product17, product18,
     product19, product20, product21, product22, product23, product24, product25, product26, product27,
     product28, product29, product30, product31, product32, product33, product34, product35, product36,
@@ -126,7 +126,8 @@ async function pr1(data){
         }
         pricesText[i].innerHTML = 'Цена: ' + mas[i][3] + ' p.'
     }
-    
+
+    console.log(products)
 }
 
 request.send()

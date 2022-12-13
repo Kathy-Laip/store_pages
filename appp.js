@@ -4,7 +4,7 @@ let app = express() // переменная для использования ex
 
 let mysql = require('mysql') // mysql модуль
 let con = mysql.createConnection({
-    host: 'localhost',
+    host: '127.0.0.1',
     user: 'root',
     password: 'regopi09',
     database: 'shop1'
@@ -19,7 +19,7 @@ app.use(express.static('public')) //использование папки public
 
 app.set('view engine', 'html') // работа с html через pug
 
-app.listen(3000, function(){
+app.listen(3306, function(){
     console.log('node express work on 3000')
 });
 
@@ -50,7 +50,7 @@ con.query(
         for(let i = 0; i < result.length; i++){
             dataUsers[result[i]['id']] = `${result[i]['id']} ${result[i]['login']} ${result[i]['password']} ${result[i]['name_user']}`
         }
-        console.log(dataUsers)
+        //console.log(dataUsers)
         app.post('/entrance.html', (req,res) => {
             res.send(dataUsers)
         })
