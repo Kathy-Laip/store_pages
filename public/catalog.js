@@ -127,8 +127,12 @@ async function pr1(data){
         pricesText[i].innerHTML = 'Цена: ' + mas[i][3] + ' p.'
     }
 
-    console.log(products)
+    document.querySelector('#p1').onclick = async function(){
+        console.log(1)
+    }
 }
+
+
 
 request.send()
 
