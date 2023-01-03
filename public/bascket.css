@@ -1,0 +1,35 @@
+#main{
+    position: absolute;
+    left: 100px;
+    top: 319px; 
+}
+
+.cl{
+    width: 1500px;
+    height: 201px;
+    background: #FFFFFF;
+    border: 3px solid #4F5434;
+    border-radius: 30px;
+    margin: 50px;
+}
+
+.p{
+    position: absolute;
+    width: 479px;
+    height: 96px;
+    left: 229px;
+    top: 354px;
+    color: #000000;
+    padding: 30px;
+}
+
+.pr{
+    position: absolute;
+    width: 384px;
+    height: 52px;
+    left: 861px;
+    top: 350px;
+    color: #000000;
+    padding: 30px;
+    display: inline-block;
+}

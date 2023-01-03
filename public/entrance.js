@@ -1,16 +1,19 @@
-var request = new XMLHttpRequest()
-request.open('POST', '/entrance.html', true)
+var request = new XMLHttpRequest() // подключение библиотеки
+request.open('POST', '/entrance.html', true) // открытие пришедшего запроса
 
-const p = new Promise((resolve, reject) =>{
+const p = new Promise((resolve, reject) =>{ // промис на прочитывание данных
     request.onload = function(){
         var dataUser = request.responseText
         resolve(dataUser)
     }
 }).then(dataUsers =>{
-    proc(dataUsers)
+    proc(dataUsers) // функция, обрабатывающая данные
 })
 
-async function proc(data){
+var curUser = null // переменная для хранения id - пользователя
+window.curUser
+
+async function proc(data){ // функция для парсинга данных
     var masData = data.split(',')
     var masOfMas = []
     for(let i = 0; i < masData.length; i++){
@@ -22,7 +25,7 @@ async function proc(data){
     masOfMas[0][0] = masOfMas[0][0].slice(1,2) 
     masOfMas[masOfMas.length - 1][3].replace('}', '')
     document.querySelector('#exit').onclick = async function(){
-        const login = document.querySelector('#login').value
+        const login = document.querySelector('#login').value // переменная для хранения значения о логине, ниже также для остальных полей
         const login2 = document.querySelector('#login')
         const pas = document.querySelector('#pas').value
         const pas2 = document.querySelector('#pas')
@@ -31,10 +34,12 @@ async function proc(data){
         var curUser = null
         let flag = false
 
+        // регулярные выражения для проверки данных
         var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         var re2 = /[a-z]\d{2}/
         var re3 = /[а-яА-Я]+$/
 
+        // проверка каждого поля
         if(re.test(login)){
             if(re2.test(pas)){
                 if(re3.test(surname)){
@@ -57,6 +62,27 @@ async function proc(data){
         } else {
             alert('Некорректный логин')
         }
+
+        ap()
+        
+        // отсылка данных на сервер
+        function ap(){
+            fetch('/getcurUser', {
+                method: 'POST',
+                body: JSON.stringify(curUser),
+                headers: {
+                    'Accept' : 'application/json',
+                    'Content-Type' : 'appliction/json'
+                }
+            })
+            .then(function(response){
+
+             })
+            .then(function(body){
+                console.log(body.pr)
+            })
+        }
+
     }
 }
 
